@@ -50,4 +50,4 @@ class Dictionary:
             if item is not None:
                 items.append(str(item[0]) + ": " + str(item[2]))
 
-        return f"{{{", ".join(items)}}}"
+        return "{" + ", ".join(items) + "}"
