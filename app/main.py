@@ -28,7 +28,7 @@ class Dictionary:
                 break
             index = (index + 1) % len(self.dictionary)
         self.dictionary[index] = (key, hash(key), value)
-        if self.capacity * 2 / 3 < len(self):
+        if len(self) > self.capacity * (2 / 3):
             self.resize()
 
     def __getitem__(self, key: Any) -> Any:
